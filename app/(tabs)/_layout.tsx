@@ -29,7 +29,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
+          title: 'Home',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Link href="/modal" asChild>
@@ -48,12 +48,19 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="recommended"
         options={{
-          title: 'Tab Two',
+          title: 'Recommended',
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
+        <Tabs.Screen
+            name="saved"
+            options={{
+                title: 'Saved',
+                tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+            }}
+        />
     </Tabs>
   );
 }
