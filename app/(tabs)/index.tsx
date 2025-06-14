@@ -4,6 +4,8 @@ import { getCoffees } from '@/lib/api';
 import CoffeeCard from '@/components/CoffeeCard';
 import CoffeeOfTheDay from '@/components/CoffeeOfTheDay';
 import SectionHeader from '@/components/SectionHeader';
+import greeting from "@/components/Greeting";
+import Greeting from "@/components/Greeting";
 
 export default function IndexScreen() {
   const [coffees, setCoffees] = useState<any[]>([]);
@@ -18,7 +20,7 @@ export default function IndexScreen() {
 
   return (
       <ScrollView contentContainerStyle={styles.container}>
-        <Text style={styles.greeting}>Good Morning</Text>
+        <Greeting />
         <Text style={styles.subtext}>Start your day with the perfect brew</Text>
 
         {coffeeOfTheDay && (
