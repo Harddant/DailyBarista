@@ -20,12 +20,12 @@ export default function Greeting({ username, profileImageUrl }: GreetingProps) {
         greeting = 'Good Evening';
     }
 
-    const textColor = useThemeColor({}, 'text');
+
 
     return (
         <View style={styles.container}>
             <View>
-                <Text style={[styles.greeting, { color: textColor }]}>
+                <Text style={[styles.greeting, { color: '#fff' }]}>
                     {greeting}{username ? `, ${username}` : ''}
                 </Text>
             </View>
@@ -41,12 +41,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingHorizontal: 16,
         marginTop: 16,
     },
     greeting: {
         fontSize: 22,
         fontWeight: '600',
+        color: '#FFF'
     },
     avatar: {
         width: 40,
