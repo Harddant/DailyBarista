@@ -1,6 +1,6 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useEffect, useState } from 'react';
-import { getCoffees } from '@/lib/api';
+import { index } from '@/lib/api';
 import CoffeeCard from '@/components/CoffeeCard';
 import CoffeeOfTheDay from '@/components/CoffeeOfTheDay';
 import SectionHeader from '@/components/SectionHeader';
@@ -12,7 +12,7 @@ export default function IndexScreen() {
   const [coffees, setCoffees] = useState<any[]>([]);
 
   useEffect(() => {
-    getCoffees()
+    index('coffee')
         .then(setCoffees)
         .catch((err) => console.error('Error loading coffees:', err));
   }, []);
