@@ -7,6 +7,7 @@ import SectionHeader from '@/components/SectionHeader';
 import Greeting from "@/components/Greeting";
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Recommended from "@/components/Recommended";
 
 export default function IndexScreen() {
   const [coffees, setCoffees] = useState<any[]>([]);
@@ -18,6 +19,8 @@ export default function IndexScreen() {
   }, []);
 
   const coffeeOfTheDay = coffees[0];
+  const recommendedCoffees = coffees.slice(coffees.length - 4);
+  console.log(recommendedCoffees);
 
   return (
       <SafeAreaView style={styles.safeArea}>
@@ -30,25 +33,35 @@ export default function IndexScreen() {
           {coffeeOfTheDay && (
               <CoffeeOfTheDay
                   name={coffeeOfTheDay.name}
+                  image={coffeeOfTheDay.imageUrl}
                   onPress={() => console.log('Go to recipe')}
               />
           )}
 
-          <View style={styles.cardRow}>
-            {coffees.slice(0, 4).map((coffee) => (
-                <CoffeeCard key={coffee.id} name={coffee.name} />
-            ))}
-          </View>
+          {coffees && (
+            <View style={styles.cardRow}>
+              {coffees.slice(0, 4).map((coffee) => (
+                  <CoffeeCard key={coffee.id} name={coffee.name} image={coffee.imageUrl} />
+              ))}
+            </View>
+          )}
 
           <SectionHeader
               title="Recommended Coffees"
               onPress={() => console.log('Go to all recommended')}
           />
 
-          <View style={styles.recommendedRow}>
-            <View style={styles.recommendationBox} />
-            <View style={styles.recommendationBox} />
-          </View>
+          {recommendedCoffees && (
+              <View style={styles.recommendedRow}>
+                {recommendedCoffees.map((coffee) => (
+                    <Recommended
+                        key={coffee.id}
+                        name={coffee.name}
+                        image={coffee.imageUrl}
+                    />
+                ))}
+              </View>
+          )}
         </ScrollView>
       </SafeAreaView>
   );
@@ -83,11 +96,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 12,
-  },
-  recommendationBox: {
-    width: '48%',
-    height: 100,
-    backgroundColor: '#fff',
-    borderRadius: 20,
   },
 });
