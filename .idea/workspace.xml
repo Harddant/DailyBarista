@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ee40cf6-44da-4c65-925f-48cab17e2b5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/Recommended.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Carousel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TextCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CoffeeOfTheDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CoffeeOfTheDay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/recommended.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/recommended.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Recommended.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ImageCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +46,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\DailyBarista" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -62,7 +73,8 @@
       <workItem from="1750057016068" duration="12379000" />
       <workItem from="1750174418857" duration="5115000" />
       <workItem from="1750230212905" duration="3096000" />
-      <workItem from="1750268388974" duration="11332000" />
+      <workItem from="1750268388974" duration="11553000" />
+      <workItem from="1750345776608" duration="18946000" />
     </task>
     <servers />
   </component>

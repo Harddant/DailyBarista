@@ -1,6 +1,6 @@
 import {View, StyleSheet, Image, Text} from "react-native";
 
-export default function Recommended ({name, image} : {name: string; image?: string;}) {
+export default function ImageCard ({name, image} : {name: string; image?: string;}) {
     return (
             <View style={styles.recommendationBox} >
                 {image ? (
@@ -18,13 +18,9 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        width: '48%',
         height: 100,
         backgroundColor: '#fff',
         borderRadius: 20,
-        paddingHorizontal: 60,
-        paddingVertical: 60,
-        marginHorizontal: 10,
     },
     image: {
         width: 60,

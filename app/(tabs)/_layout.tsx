@@ -22,12 +22,10 @@ export default function TabLayout() {
         <Tabs
             screenOptions={{
                 headerShown: false,
-                tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+                tabBarActiveTintColor: '#C4A484',
                 tabBarStyle: {
                     backgroundColor: '#fff',
-                    borderTopLeftRadius: 20,
-                    borderTopRightRadius: 20,
-                    height: 50,
+                    height: 80,
                     paddingTop: 4
                 },
             }}

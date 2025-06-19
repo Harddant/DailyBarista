@@ -7,7 +7,7 @@ import SectionHeader from '@/components/SectionHeader';
 import Greeting from "@/components/Greeting";
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import Recommended from "@/components/Recommended";
+import Carousel from "@/components/Carousel";
 
 export default function IndexScreen() {
   const [coffees, setCoffees] = useState<any[]>([]);
@@ -19,9 +19,8 @@ export default function IndexScreen() {
   }, []);
 
   const coffeeOfTheDay = coffees[0];
-  const recommendedCoffees = coffees.slice(coffees.length - 4);
-  console.log(recommendedCoffees);
-
+  const recommendedCoffeesList = coffees.slice(coffees.length - 4);
+  const recommendedCoffees = recommendedCoffeesList.concat(recommendedCoffeesList);
   return (
       <SafeAreaView style={styles.safeArea}>
         <StatusBar style="light" translucent backgroundColor="transparent" />
@@ -41,7 +40,7 @@ export default function IndexScreen() {
           {coffees && (
             <View style={styles.cardRow}>
               {coffees.slice(0, 4).map((coffee) => (
-                  <CoffeeCard key={coffee.id} name={coffee.name} image={coffee.imageUrl} />
+                  <CoffeeCard key={'coffee'+ coffee.id} name={coffee.name} image={coffee.imageUrl} />
               ))}
             </View>
           )}
@@ -52,15 +51,7 @@ export default function IndexScreen() {
           />
 
           {recommendedCoffees && (
-              <View style={styles.recommendedRow}>
-                {recommendedCoffees.map((coffee) => (
-                    <Recommended
-                        key={coffee.id}
-                        name={coffee.name}
-                        image={coffee.imageUrl}
-                    />
-                ))}
-              </View>
+              <Carousel recommendedCoffees={recommendedCoffees} />
           )}
         </ScrollView>
       </SafeAreaView>
@@ -74,6 +65,7 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 20,
+    paddingVertical: 20,
     backgroundColor: '#C4A484',
     color: '#fff'
   },
@@ -86,15 +78,12 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#fff',
     marginTop: 4,
+    marginBottom: 16,
   },
   cardRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: 24,
-  },
-  recommendedRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginTop: 12,
+    marginTop: 16,
+    marginBottom: 16,
   },
 });

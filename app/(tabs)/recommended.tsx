@@ -1,14 +1,27 @@
-import { StyleSheet } from 'react-native';
-
-import EditScreenInfo from '@/components/EditScreenInfo';
+import {Image, StyleSheet} from 'react-native';
 import { Text, View } from '@/components/Themed';
+import TextCard from "@/components/TextCard";
+import {useEffect, useState} from "react";
+import {index} from "@/lib/api";
 
 export default function RecommendedScreen() {
+  const [coffeeTypes, setCoffeeTypes] = useState<any[]>([]);
+
+  useEffect(() => {
+    index('coffeetype')
+        .then(setCoffeeTypes)
+        .catch((err) => console.error('Error loading coffee types:', err));
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Recommended Coffees</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/recommended.tsx" />
+      <TextCard description={"Recommended"} customStyles={{width: '80%', height: 20, }} />
+
+      <View style={styles.typeBox}>
+        {coffeeTypes.slice(0, 2).map((type) =>(
+          <TextCard key={'type' + type.id} description={type.name} customStyles={{width: '40%', height: 40, marginTop: 10,}} />
+        ))}
+      </View>
     </View>
   );
 }
@@ -16,16 +29,12 @@ export default function RecommendedScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: 40,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+  typeBox: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginEnd: 38,
+  }
 });
