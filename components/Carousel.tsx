@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         height: 8,
         width: 8,
         borderRadius: 4,
-        backgroundColor: '#fff',
+        backgroundColor: '#dddddddd',
         marginHorizontal: 4,
     },
     recommendedRow: {

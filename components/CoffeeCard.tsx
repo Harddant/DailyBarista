@@ -15,8 +15,10 @@ export default function CoffeeCard({name, image}: {name: string; image?: string}
 
 const styles = StyleSheet.create({
     card: {
-        width: 70,
+        paddingHorizontal: 20,
         alignItems: 'center',
+        backgroundColor: '#ffffff',
+        borderRadius: 20,
     },
     image: {
         width: 60,

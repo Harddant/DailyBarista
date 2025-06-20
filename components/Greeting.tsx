@@ -25,7 +25,7 @@ export default function Greeting({ username, profileImageUrl }: GreetingProps) {
     return (
         <View style={styles.container}>
             <View>
-                <Text style={[styles.greeting, { color: '#fff' }]}>
+                <Text style={[styles.greeting, { color: '#040106' }]}>
                     {greeting}{username ? `, ${username}` : ''}
                 </Text>
             </View>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     greeting: {
         fontSize: 22,
         fontWeight: '600',
-        color: '#FFF'
+        color: '#040106'
     },
     avatar: {
         width: 40,

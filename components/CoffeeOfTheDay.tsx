@@ -15,34 +15,38 @@ export default function CoffeeOfTheDay({ name, onPress, image }: { name: string;
                     <View style={styles.placeholder} />
                 )}
             </View>
-
-            <TouchableOpacity style={styles.button} onPress={onPress}>
-                <Text style={styles.buttonText}>See Recipe!</Text>
-            </TouchableOpacity>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
-        padding: 20,
+        backgroundColor: '#ffffff',
+        padding: 30,
         borderRadius: 20,
         marginTop: 20,
+        marginBottom: 20,
+        shadowColor: '#000000',
+        shadowOpacity: 0.2, shadowRadius: 20,
     },
     title: {
+        flexDirection: 'row',
         fontSize: 16,
+        marginBottom: 12,
     },
     name: {
         fontSize: 24,
         fontWeight: 'bold',
         marginTop: 8,
+        flex: 1,
+        justifyContent: "flex-start"
     },
 
     image: {
-        width: 60,
-        height: 60,
+        width: 120,
+        height: 120,
         borderRadius: 12,
+        marginLeft: 22,
     },
 
     placeholder: {
@@ -50,15 +54,5 @@ const styles = StyleSheet.create({
         height: 60,
         backgroundColor: '#ddd',
         borderRadius: 12,
-    },
-
-    button: {
-        backgroundColor: '#000',
-        padding: 10,
-        borderRadius: 10,
-        marginTop: 10,
-    },
-    buttonText: {
-        color: '#fff',
     },
 });

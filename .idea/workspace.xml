@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ee40cf6-44da-4c65-925f-48cab17e2b5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Carousel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/TextCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/recommended.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/recommended.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Recommended.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ImageCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CoffeeCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CoffeeCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CoffeeOfTheDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CoffeeOfTheDay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Greeting.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Greeting.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ImageCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ImageCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SectionHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SectionHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/Colors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/Colors.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,20 +33,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/DailyBarista&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\DailyBarista\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/DailyBarista",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\DailyBarista\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\DailyBarista" />
@@ -75,6 +77,7 @@
       <workItem from="1750230212905" duration="3096000" />
       <workItem from="1750268388974" duration="11553000" />
       <workItem from="1750345776608" duration="18946000" />
+      <workItem from="1750416487746" duration="8440000" />
     </task>
     <servers />
   </component>

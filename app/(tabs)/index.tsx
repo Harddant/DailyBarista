@@ -37,13 +37,13 @@ export default function IndexScreen() {
               />
           )}
 
-          {coffees && (
-            <View style={styles.cardRow}>
-              {coffees.slice(0, 4).map((coffee) => (
-                  <CoffeeCard key={'coffee'+ coffee.id} name={coffee.name} image={coffee.imageUrl} />
-              ))}
-            </View>
-          )}
+          {/*{coffees && (*/}
+          {/*  <View style={styles.cardRow}>*/}
+          {/*    {coffees.slice(0, 4).map((coffee) => (*/}
+          {/*        <CoffeeCard key={'coffee'+ coffee.id} name={coffee.name} image={coffee.imageUrl} />*/}
+          {/*    ))}*/}
+          {/*  </View>*/}
+          {/*)}*/}
 
           <SectionHeader
               title="Recommended Coffees"
@@ -61,22 +61,22 @@ export default function IndexScreen() {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#C4A484', // brown background for top
+    backgroundColor: '#fffbea',
   },
   container: {
     padding: 20,
     paddingVertical: 20,
-    backgroundColor: '#C4A484',
-    color: '#fff'
+    backgroundColor: '#fffbea',
+    color: '#040106'
   },
   greeting: {
     fontSize: 28,
     fontWeight: '600',
-    color: '#fff',
+    color: '#040106',
   },
   subtext: {
     fontSize: 14,
-    color: '#fff',
+    color: '#040106',
     marginTop: 4,
     marginBottom: 16,
   },

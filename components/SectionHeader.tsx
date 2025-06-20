@@ -4,9 +4,6 @@ export default function SectionHeader({ title, onPress }: { title: string; onPre
     return (
         <View style={styles.container}>
             <Text style={styles.title}>{title}</Text>
-            <TouchableOpacity onPress={onPress}>
-                <Text style={styles.button}>See all</Text>
-            </TouchableOpacity>
         </View>
     );
 }
@@ -21,13 +18,5 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 18,
         fontWeight: '600',
-    },
-    button: {
-        backgroundColor: '#000',
-        color: '#fff',
-        paddingHorizontal: 12,
-        paddingVertical: 6,
-        borderRadius: 15,
-        fontSize: 12,
     },
 });
